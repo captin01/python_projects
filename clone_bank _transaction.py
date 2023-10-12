@@ -32,24 +32,23 @@ class bank:
 
 print(f'Welcome to {bank.bankname} , {bank.branch}')
 
-#collect user data for account creation
-username=input('Enter Your name :')
-ccv=input('Enter ccv card number : ')
-address=input('Enter Your address : ')
-
 #FIX THIS PART
-#while True:
-    #if username == str(" "):
-        #print("Key in name please")
-    #elif ccv == int():
-        #print("Key in ccv number kindly, 3 digit number behind card")
-    #elif address == str(" "):
-        #print("Key in address please")
-    #else:
-        #break
+#collect user data for account creation
+while True:
+    username=input('Enter Your name :')
+    ccv=input('Enter ccv card number : ')
+    address=input('Enter Your address : ')
+    if username != str(" "):
+        print("Key in name please")
+    elif ccv != int():
+        print("Key in ccv number kindly, 3 digit number behind card")
+    elif address != str(" "):
+        print("Key in address please")
+    else:
+        break
 
-
-b=bank(username,ccv,address) # object creation based on user provided data
+# object creation based on user provided data
+b=bank(username,ccv,address) 
 
 #Creating select option
 while True:
